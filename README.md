@@ -1,0 +1,2 @@
+# JSONTyper
+Types Json Files
