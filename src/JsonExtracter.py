@@ -6,6 +6,9 @@ import pyautogui
 
 logObj = open("log.txt", "w")
 outputFile = open("input.txt", "w")
+indexFile = open("fileIndex.txt", "r")
+
+
 
 def log(str):
 	logObj.write(str)
@@ -14,9 +17,10 @@ def log(str):
 with open('data.txt', 'r') as file:
     jsonString = file.read().replace('\n', '')
 
+fileIndexNumber = int(indexFile.readline()[0])
 
 data = json.loads(jsonString)
-code = data['ref']['solution']['filesContentArr'][0]['fileContent']
+code = data['ref']['solution']['filesContentArr'][fileIndexNumber]['fileContent']
 
 outputFile.write(code)
 
