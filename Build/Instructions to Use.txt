@@ -1,0 +1,4 @@
+1.Copy the .json response into data.txt
+2.Run jsonExtracter.exe
+3.Run IndentationExtracter.exe
+4.Run Autotyper and place cursor at desired Position
